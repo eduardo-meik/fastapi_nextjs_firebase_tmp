@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend - Next.js + React + TypeScript + Tailwind CSS
+
+This is a [Next.js](https://nextjs.org) project with TypeScript, Tailwind CSS, and Firebase integration.
+
+## Features
+
+- ⚛️ **React 19** - Latest React features
+- 🔷 **Next.js 15** - App Router, Server Components
+- 📘 **TypeScript** - Full type safety
+- 🎨 **Tailwind CSS** - Utility-first styling
+- 🔥 **Firebase** - Authentication and Firestore
+- 📡 **API Integration** - Connected to FastAPI backend
 
 ## Getting Started
 
-First, run the development server:
+### 1. Install Dependencies
+
+```bash
+npm install
+```
+
+### 2. Configure Environment Variables
+
+```bash
+cp .env.local.example .env.local
+```
+
+Edit `.env.local` with your configuration:
+- Add Firebase credentials (optional)
+- Set `NEXT_PUBLIC_API_URL` if backend is not on `http://localhost:8000`
+
+### 3. Run Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 4. Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
+
+## Project Structure
+
+```
+frontend/
+├── app/
+│   ├── layout.tsx      # Root layout
+│   ├── page.tsx        # Home page
+│   └── globals.css     # Global styles
+├── components/         # React components
+│   ├── UserList.tsx    # User list component
+│   └── StatusCard.tsx  # Status display component
+├── lib/               # Utilities
+│   ├── firebase.ts    # Firebase configuration
+│   └── api.ts         # API client functions
+└── public/            # Static assets
+```
+
+## Components
+
+### UserList
+Displays users fetched from the FastAPI backend. Includes loading states and error handling.
+
+### StatusCard
+Shows system status for backend API and Firebase connections.
+
+## API Integration
+
+The frontend communicates with the FastAPI backend through the API client in `lib/api.ts`:
+
+- `getUsers()` - Fetch users list
+- `createUser()` - Create a new user
+- `checkHealth()` - Backend health check
+- `getFirebaseStatus()` - Firebase connection status
+
+## Firebase Setup (Optional)
+
+1. Create a Firebase project at [Firebase Console](https://console.firebase.google.com/)
+2. Register a web app in your Firebase project
+3. Copy the configuration to `.env.local`
+4. Enable Authentication and Firestore in Firebase Console
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js Documentation](https://nextjs.org/docs)
+- [React Documentation](https://react.dev)
+- [TypeScript Documentation](https://www.typescriptlang.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Firebase Documentation](https://firebase.google.com/docs)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Vercel (Recommended)
 
-## Deploy on Vercel
+The easiest way to deploy is using [Vercel](https://vercel.com/new):
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Push your code to GitHub
+2. Import the repository in Vercel
+3. Configure environment variables
+4. Deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Other Platforms
+
+You can also deploy to:
+- Netlify
+- AWS Amplify
+- Google Cloud Platform
+- Self-hosted with Docker
+
+Make sure to set environment variables in your deployment platform.
