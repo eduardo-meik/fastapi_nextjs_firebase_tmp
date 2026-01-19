@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org) project with TypeScript, Tailwind CSS, a
 ## Features
 
 - ⚛️ **React 19** - Latest React features
-- 🔷 **Next.js 15** - App Router, Server Components
+- 🔷 **Next.js 16** - App Router, Server Components
 - 📘 **TypeScript** - Full type safety
 - 🎨 **Tailwind CSS** - Utility-first styling
 - 🔥 **Firebase** - Authentication and Firestore

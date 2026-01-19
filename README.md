@@ -11,7 +11,7 @@ A modern, production-ready full-stack template combining the best of backend and
 - **Pydantic** - Data validation
 
 ### Frontend
-- **Next.js 15** - React framework with App Router
+- **Next.js 16** - React framework with App Router
 - **React 19** - UI library
 - **TypeScript** - Type safety
 - **Tailwind CSS** - Utility-first CSS framework
