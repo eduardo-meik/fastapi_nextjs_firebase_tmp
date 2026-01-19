@@ -1,0 +1,2 @@
+# fastapi_nextjs_firebase_tmp
+Template
