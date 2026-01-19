@@ -1,0 +1,39 @@
+# Root gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+ENV/
+
+# Node
+node_modules/
+.next/
+out/
+*.log
+
+# Environment variables
+.env
+.env.local
+.env*.local
+
+# Firebase credentials
+serviceAccountKey.json
+firebase-credentials.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log
